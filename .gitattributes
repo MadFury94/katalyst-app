@@ -1,0 +1,14 @@
+# Normalize line endings
+* text=auto
+
+# Binary files - no line ending conversion
+*.webp binary
+*.webm binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.ico binary
+*.png binary
+*.gif binary
+*.zip binary
