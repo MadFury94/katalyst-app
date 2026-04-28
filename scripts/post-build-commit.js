@@ -78,6 +78,12 @@ function buildBody(files) {
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
+// Skip git operations in CI environments
+if (process.env.CI || process.env.CF_PAGES) {
+  console.log('✓ Running in CI environment - skipping git commit')
+  process.exit(0)
+}
+
 try {
   // Stage everything (respects .gitignore)
   run('git add .')
